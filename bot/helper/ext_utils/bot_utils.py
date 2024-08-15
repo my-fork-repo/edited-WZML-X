@@ -573,7 +573,7 @@ async def get_stats(event, key="home"):
             remarks=await compare_versions(get_version(), official_v),
         )
     elif key == "mymsg":
-        msg = "comming soon"
+        msg = "some details\n"
         msg += "my group : https://t.me/+n8u2GAyzcg00NmFl"
         msg += "leech group : https://t.me/leechedgroup"
     elif key == "botlimits":
