@@ -507,6 +507,7 @@ async def get_stats(event, key="home"):
         btns.ibutton('OS Stats', f'wzmlx {user_id} stats stsys')
         btns.ibutton('Repo Stats', f'wzmlx {user_id} stats strepo')
         btns.ibutton('Bot Limits', f'wzmlx {user_id} stats botlimits')
+        btns.ibutton('my Stats', f'wzmlx {user_id} stats mymsg')
         msg = "⌬ <b><i>Bot & OS Statistics!</i></b>"
     elif key == "stbot":
         total, used, free, disk = disk_usage('/')
@@ -571,6 +572,8 @@ async def get_stats(event, key="home"):
             commit_details=changelog,
             remarks=await compare_versions(get_version(), official_v),
         )
+    elif key == "mymsg";
+        msg = "comming soon"
     elif key == "botlimits":
         msg = BotTheme('BOT_LIMITS',
                 DL = ('∞' if (val := config_dict['DIRECT_LIMIT']) == '' else val),
