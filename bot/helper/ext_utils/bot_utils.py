@@ -574,6 +574,8 @@ async def get_stats(event, key="home"):
         )
     elif key == "mymsg":
         msg = "comming soon"
+        msg += "my group : https://t.me/+n8u2GAyzcg00NmFl"
+        msg += "leech group : https://t.me/leechedgroup"
     elif key == "botlimits":
         msg = BotTheme('BOT_LIMITS',
                 DL = ('∞' if (val := config_dict['DIRECT_LIMIT']) == '' else val),
