@@ -572,7 +572,7 @@ async def get_stats(event, key="home"):
             commit_details=changelog,
             remarks=await compare_versions(get_version(), official_v),
         )
-    elif key == "mymsg";
+    elif key == "mymsg":
         msg = "comming soon"
     elif key == "botlimits":
         msg = BotTheme('BOT_LIMITS',
