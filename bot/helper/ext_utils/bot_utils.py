@@ -299,6 +299,7 @@ def get_readable_message():
     msg += BotTheme('uptime', uptime=get_readable_time(time() - botStartTime))
     msg += BotTheme('DL', DL=get_readable_file_size(dl_speed))
     msg += BotTheme('UL', UL=get_readable_file_size(up_speed))
+    msg += BotTheme('Group link for leech : https://t.me/leechedgroup')
     return msg, button
 
 
