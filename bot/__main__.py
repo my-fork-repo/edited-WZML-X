@@ -123,7 +123,7 @@ async def ping(_, message):
     reply = await sendMessage(message, BotTheme('PING'))
     end_time = monotonic()
     await sendMessage(reply, BotTheme('PING_VALUE', value=int((end_time - start_time) * 1000)))
-    await sendMessage(message,bot_uptime=get_readable_time(time() - botStartTime)
+    await sendMessage(message,bot_start_time=get_readable_time(time() - botStartTime))
 
 
 async def log(_, message):
