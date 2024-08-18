@@ -576,6 +576,7 @@ async def get_stats(event, key="home"):
         msg = "some details\n"
         msg += "my group : https://t.me/+n8u2GAyzcg00NmFl"
         msg += "\nleech group : https://t.me/leechedgroup"
+        msg += "\n my edited repo : https://github.com/my-fork-repo/edited-WZML-X"
     elif key == "botlimits":
         msg = BotTheme('BOT_LIMITS',
                 DL = ('∞' if (val := config_dict['DIRECT_LIMIT']) == '' else val),
