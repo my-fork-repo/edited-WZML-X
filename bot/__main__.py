@@ -22,7 +22,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot import bot, user, bot_name, config_dict, user_data, botStartTime, LOGGER, Interval, DATABASE_URL, QbInterval, INCOMPLETE_TASK_NOTIFIER, scheduler
 from bot.version import get_version
 from .helper.ext_utils.fs_utils import start_cleanup, clean_all, exit_clean_up
-from .helper.ext_utils.bot_utils import get_readable_time, cmd_exec, sync_to_async, new_task, set_commands, update_user_ldata, get_stats
+from .helper.ext_utils.bot_utils import get_readable_time, cmd_exec, sync_to_async, new_task, set_commands, update_user_ldata, get_stats, 
 from .helper.ext_utils.db_handler import DbManger
 from .helper.telegram_helper.bot_commands import BotCommands
 from .helper.telegram_helper.message_utils import sendMessage, editMessage, editReplyMarkup, sendFile, deleteMessage, delete_all_messages
@@ -122,7 +122,8 @@ async def ping(_, message):
     start_time = monotonic()
     reply = await sendMessage(message, BotTheme('PING'))
     end_time = monotonic()
-    await editMessage(reply, BotTheme('PING_VALUE', value=int((end_time - start_time) * 1000)))
+    await sendMessage(reply, BotTheme('PING_VALUE', value=int((end_time - start_time) * 1000)))
+    await sendMessage(message,bot_uptime=get_readable_time(time() - botStartTime)
 
 
 async def log(_, message):
